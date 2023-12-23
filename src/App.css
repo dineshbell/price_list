@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Container Styles */
+.grid-container,
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Card Styles */
+.grid-card,
+.list-card {
+  box-sizing: border-box;
+  width: 300px;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid-card img,
+.list-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Search Input and Button Styles */
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  box-sizing: border-box;
+  /* justify-content: center;
+  align-items: center; */
+  margin-left: 220px;
+}
+
+button {
+  padding: 10px;
+  background-color: #6a76b2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Highlight Style for Search Results */
+.highlight {
+  background-color:none;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .grid-card,
+  .list-card {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* List View Styles */
+.list-container {
+  flex-direction: column;
+}
+
+/* Grid View Styles */
+.grid-container {
+  justify-content: flex-start;
+}
+
+.grid-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-card h3 {
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.grid-card li {
+  margin: 5px 0;
 }
